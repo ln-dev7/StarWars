@@ -162,22 +162,28 @@ body {
 .card-container-infos .infos-year .numbers .number-1 {
   transform: translateY(100%);
   transition: 0.5s ease;
+  opacity: 0;
 }
 .card-container-infos .infos-year .numbers .number-1.active {
+  opacity: 1;
   transform: translateY(0);
 }
 .card-container-infos .infos-year .numbers .number-2 {
   transform: translateY(0);
   transition: 0.5s ease;
+  opacity: 0;
 }
 .card-container-infos .infos-year .numbers .number-2.active {
+  opacity: 1;
   transform: translateY(-100%);
 }
 .card-container-infos .infos-year .numbers .number-3 {
   transform: translateY(-100%);
   transition: 0.5s ease;
+  opacity: 0;
 }
 .card-container-infos .infos-year .numbers .number-3.active {
+  opacity: 1;
   transform: translateY(-200%);
 }
 .card-container-img {
@@ -230,11 +236,36 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.card-evolution .circles .line {
+  position: relative;
+  height: 2px;
+  width: 20%;
+  background: rgba(255, 243, 138, 0.5);
+}
+.card-evolution .circles .line::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  transform-origin: left;
+  transform: scaleX(0);
+  background: #fff38a;
+  transition: 0.5s ease-in-out;
+}
+.card-evolution .circles .line.active {
+  position: relative;
+}
+.card-evolution .circles .line.active.active::before {
+  transform: scaleX(100%);
+}
 .card-evolution .circles .circle {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #000;
+  background: rgba(255, 243, 138, 0.5);
+}
+.card-evolution .circles .circle.active {
+  background: #fff38a;
 }
 
 @media screen and (max-width: 1285px) {
@@ -250,5 +281,36 @@ body {
 @media screen and (max-width: 940px) {
   .card {
     width: 95%;
+  }
+}
+@media screen and (max-width: 840px) {
+  body {
+    min-height: 100vh;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+  .card-container-infos {
+    width: 45%;
+    margin-right: 0;
+  }
+  .card-container-infos .infos-title {
+    width: 100%;
+  }
+  .card-container-infos .infos-year {
+    margin-top: 175px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .card-container-infos .infos-year h1 {
+    font-size: 100px;
+  }
+  .card-container-img {
+    width: 45%;
+  }
+  .card-container-img img {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
