@@ -60,7 +60,7 @@ body {
           font-weight: 700;
           font-size: 32px;
         }
-        p{
+        p {
           //margin-bottom: 1rem;
         }
         .logos {
@@ -115,7 +115,7 @@ body {
             }
           }
         }
-        .descriptions{
+        .descriptions {
           overflow: hidden;
           display: flex;
           flex-direction: column;
@@ -229,11 +229,50 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
+    width: 100%;
     &-arrow {
       img {
         cursor: pointer;
         margin: 0 0.5rem;
       }
     }
+    .circles{
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .circle{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #000;
+      }
+    }
   }
 }
+
+@media screen and (max-width: 1285px) {
+  .card {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .card {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .card {
+    width: 95%;
+  }
+}
+
+// @media screen and (max-width: 840px) {
+//   .card {
+//     &-container {
+//       flex-direction: column;
+//     }
+//   }
+// }
