@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: #fff38a;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #060447;
+  height: 100vh;
+}
+
+.card {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.card-container-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 2rem;
+  height: 500px;
+}
+.card-container-infos .infos-title img {
+  margin-bottom: 24px;
+}
+.card-container-infos .infos-title h2 {
+  font-weight: 700;
+  font-size: 32px;
+}
+.card-container-infos .infos-title .logos {
+  width: 80px;
+  display: flex;
+  overflow: hidden;
+}
+.card-container-infos .infos-title .logos .logo-1 {
+  transform: translateX(100%);
+  transition: 0.5s ease-in-out;
+}
+.card-container-infos .infos-title .logos .logo-1.active {
+  transform: translateX(0);
+}
+.card-container-infos .infos-title .logos .logo-2 {
+  transform: translateX(0);
+  transition: 0.5s ease-in-out;
+}
+.card-container-infos .infos-title .logos .logo-2.active {
+  transform: translateX(-100%);
+}
+.card-container-infos .infos-title .logos .logo-3 {
+  transform: translateX(-100%);
+  transition: 0.5s ease-in-out;
+}
+.card-container-infos .infos-title .logos .logo-3.active {
+  transform: translateX(-200%);
+}
+.card-container-infos .infos-title .titles {
+  overflow: hidden;
+  height: 38px;
+}
+.card-container-infos .infos-title .titles .title-1 {
+  transform: translateY(100%);
+  transition: 0.5s ease;
+}
+.card-container-infos .infos-title .titles .title-1.active {
+  transform: translateY(0);
+}
+.card-container-infos .infos-title .titles .title-2 {
+  transform: translateY(0);
+  transition: 0.5s ease;
+}
+.card-container-infos .infos-title .titles .title-2.active {
+  transform: translateY(-100%);
+}
+.card-container-infos .infos-title .titles .title-3 {
+  transform: translateY(-100%);
+  transition: 0.5s ease;
+}
+.card-container-infos .infos-title .titles .title-3.active {
+  transform: translateY(-200%);
+}
+.card-container-infos .infos-title .descriptions {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 75px;
+}
+.card-container-infos .infos-title .descriptions .description-1 {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.card-container-infos .infos-title .descriptions .description-1.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-container-infos .infos-title .descriptions .description-2 {
+  transform: translateY(0);
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.card-container-infos .infos-title .descriptions .description-2.active {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+.card-container-infos .infos-title .descriptions .description-3 {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.card-container-infos .infos-title .descriptions .description-3.active {
+  opacity: 1;
+  transform: translateY(-200%);
+}
+.card-container-infos .infos-year h1 {
+  font-size: 175px;
+  font-weight: 700;
+  display: flex;
+  align-items: flex-start;
+  height: 200px;
+  overflow: hidden;
+}
+.card-container-infos .infos-year h1 span {
+  font-weight: 700;
+}
+.card-container-infos .infos-year .numbers {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-container-infos .infos-year .numbers .number-1 {
+  transform: translateY(100%);
+  transition: 0.5s ease;
+}
+.card-container-infos .infos-year .numbers .number-1.active {
+  transform: translateY(0);
+}
+.card-container-infos .infos-year .numbers .number-2 {
+  transform: translateY(0);
+  transition: 0.5s ease;
+}
+.card-container-infos .infos-year .numbers .number-2.active {
+  transform: translateY(-100%);
+}
+.card-container-infos .infos-year .numbers .number-3 {
+  transform: translateY(-100%);
+  transition: 0.5s ease;
+}
+.card-container-infos .infos-year .numbers .number-3.active {
+  transform: translateY(-200%);
+}
+.card-container-img {
+  max-width: 349px;
+  height: 500px;
+  display: flex;
+  overflow: hidden;
+}
+.card-container-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-container-img .bg-1 {
+  transform: translateX(100%);
+  transition: 0.5s ease-in-out;
+}
+.card-container-img .bg-1.active {
+  transform: translateX(0);
+}
+.card-container-img .bg-2 {
+  transform: translateX(0);
+  transition: 0.5s ease-in-out;
+}
+.card-container-img .bg-2.active {
+  transform: translateX(-100%);
+}
+.card-container-img .bg-3 {
+  transform: translateX(-100%);
+  transition: 0.5s ease-in-out;
+}
+.card-container-img .bg-3.active {
+  transform: translateX(-200%);
+}
+.card-evolution {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.card-evolution-arrow img {
+  cursor: pointer;
+  margin: 0 0.5rem;
+}/*# sourceMappingURL=style.css.map */
