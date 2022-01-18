@@ -61,6 +61,7 @@ body {
           font-size: 32px;
         }
         p {
+          padding-top: 1rem;
           //margin-bottom: 1rem;
         }
         .logos {
@@ -69,21 +70,21 @@ body {
           overflow: hidden;
           .logo-1 {
             transform: translateX(100%);
-            transition: 0.5s ease-in-out;
+            transition: 0.2s ease-in-out;
             &.active {
               transform: translateX(0);
             }
           }
           .logo-2 {
             transform: translateX(0);
-            transition: 0.5s ease-in-out;
+            transition: 0.2s ease-in-out;
             &.active {
               transform: translateX(-100%);
             }
           }
           .logo-3 {
             transform: translateX(-100%);
-            transition: 0.5s ease-in-out;
+            transition: 0.2s ease-in-out;
             &.active {
               transform: translateX(-200%);
             }
@@ -95,21 +96,21 @@ body {
           height: 38px;
           .title-1 {
             transform: translateY(100%);
-            transition: 0.5s ease;
+            transition: 0.2s ease;
             &.active {
               transform: translateY(0);
             }
           }
           .title-2 {
             transform: translateY(0);
-            transition: 0.5s ease;
+            transition: 0.2s ease;
             &.active {
               transform: translateY(-100%);
             }
           }
           .title-3 {
             transform: translateY(-100%);
-            transition: 0.5s ease;
+            transition: 0.2s ease;
             &.active {
               transform: translateY(-200%);
             }
@@ -124,7 +125,7 @@ body {
           .description-1 {
             transform: translateY(100%);
             opacity: 0;
-            transition: 0.5s ease;
+            transition: 0.2s ease;
             &.active {
               opacity: 1;
               transform: translateY(0);
@@ -133,7 +134,7 @@ body {
           .description-2 {
             transform: translateY(0);
             opacity: 0;
-            transition: 0.5s ease;
+            transition: 0.2s ease;
             &.active {
               opacity: 1;
               transform: translateY(-100%);
@@ -142,7 +143,7 @@ body {
           .description-3 {
             transform: translateY(-100%);
             opacity: 0;
-            transition: 0.5s ease;
+            transition: 0.2s ease;
             &.active {
               opacity: 1;
               transform: translateY(-200%);
@@ -169,7 +170,7 @@ body {
           align-items: center;
           .number-1 {
             transform: translateY(100%);
-            transition: 0.5s ease;
+            transition: 0.2s ease;
             opacity: 0;
             &.active {
               opacity: 1;
@@ -178,7 +179,7 @@ body {
           }
           .number-2 {
             transform: translateY(0);
-            transition: 0.5s ease;
+            transition: 0.2s ease;
             opacity: 0;
             &.active {
               opacity: 1;
@@ -187,7 +188,7 @@ body {
           }
           .number-3 {
             transform: translateY(-100%);
-            transition: 0.5s ease;
+            transition: 0.2s ease;
             opacity: 0;
             &.active {
               opacity: 1;
@@ -209,21 +210,21 @@ body {
       }
       .bg-1 {
         transform: translateX(100%);
-        transition: 0.5s ease-in-out;
+        transition: 0.2s ease-in-out;
         &.active {
           transform: translateX(0);
         }
       }
       .bg-2 {
         transform: translateX(0);
-        transition: 0.5s ease-in-out;
+        transition: 0.2s ease-in-out;
         &.active {
           transform: translateX(-100%);
         }
       }
       .bg-3 {
         transform: translateX(-100%);
-        transition: 0.5s ease-in-out;
+        transition: 0.2s ease-in-out;
         &.active {
           transform: translateX(-200%);
         }
@@ -260,7 +261,7 @@ body {
           transform-origin: left;
           transform: scaleX(0);
           background: $yellow;
-          transition: 0.5s ease-in-out;
+          transition: 0.2s ease-in-out;
         }
       }
       .line.active {
@@ -272,13 +273,27 @@ body {
         }
       }
       .circle {
+        position: relative;
         width: 30px;
         height: 30px;
         border-radius: 50%;
         background: rgba($color: $yellow, $alpha: 0.5);
+        overflow: hidden;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 0%;
+          height: 100%;
+          background: $yellow;
+          transition: 0.2s ease-in-out;
+        }
       }
       .circle.active {
-        background: $yellow;
+        position: relative;
+        &::before {
+          background: $yellow;
+          width: 100%;
+        }
       }
     }
   }
@@ -303,31 +318,34 @@ body {
 }
 
 @media screen and (max-width: 840px) {
-  body{
+  body {
     min-height: 100vh;
   }
   .card {
     max-width: 100%;
     &-container {
-      &-infos{
+      &-infos {
         width: 45%;
         margin-right: 0;
-        .infos-title{
+        .infos-title {
           width: 100%;
+          .descriptions {
+            width: auto;
+          }
         }
-        .infos-year{
+        .infos-year {
           margin-top: 175px;
           display: flex;
           align-items: flex-end;
           justify-content: flex-end;
-          h1{
+          h1 {
             font-size: 100px;
           }
         }
       }
-      &-img{
+      &-img {
         width: 45%;
-        img{
+        img {
           width: 100%;
         }
       }
